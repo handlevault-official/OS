@@ -16,7 +16,7 @@
 ## 🚀 The Enterprise Suite & Features
 HandleVault OS houses core mailing modules, standalone studio apps, and immersive features built into a single, seamless web platform:
 
-1. **✉️ 3D Envelope Studio:** Interactive digital letters with custom wax seals and unboxing experiences.
+1. **✉️ 3D Envelope Studio:** Interactive digital letters with custom wax seals, unboxing experiences, and a built-in **"Sent via HandleVault"** attribution mark at the bottom of letters to drive organic traffic from recipients.
 2. **🎨 VIP Badge & Pass Generator:** Attendee ID badges and QR-enabled access passes with security features.
 3. **💎 Certificate & Award Forge:** Bulk generation of digital honors and employee recognition awards.
 4. **🚨 Live Ticker Hub:** Real-time stream announcements and retro-futuristic event feeds.
@@ -25,7 +25,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 7. **🔒 Security & Anti-Piracy Protection:** Built-in safeguards for free-tier previews including dynamic **Watermarks**, **Blurred Previews**, and **Animated Live Badges** (to prevent unauthorized static screenshots and protect event pass integrity).
 8. **💾 Save Progress & Session Tracking:** Built-in one-click save buttons and real-time progress tracking so users can preserve drafts, monitor completion status, and resume projects anytime without data loss.
 9. **💳 Multi-Payment Gateway (8-Method Checkout):** Integrated support for diverse payment methods (Credit/Debit Card, E-Wallets, Bank Transfers, and alternative checkouts) for seamless event-pass and Pro licensing.
-10. **👑 Pro Tier (Ad-Free & Full Export):** Instant removal of all AdSense placements, sponsor banners, watermarks, and blur effects upon purchase, unlocking high-resolution downloads and an uninterrupted workspace.
+10. **👑 Pro Tier (Ad-Free, White-Label & Full Export):** Instant removal of all AdSense placements, sponsor banners, preview watermarks, and "Sent via HandleVault" branding upon purchase, unlocking white-label exports and an uninterrupted workspace.
 11. **🔊 Immersive Sound Effects (SFX):** Built-in retro audio cues, interface clicks, and unboxing soundscapes for enhanced user engagement.
 12. **🤝 Monetization & Creator Support (Sponsor, AdSense & Ko-fi Slots):** Dedicated placements for brand sponsorships, Google AdSense integration (for free-tier users), and one-click Ko-fi tipping/support widgets.
 13. **🔗 Instant Sharing & Social Distribution:** One-click sharing buttons for direct links, social media, and instant guest invitation forwarding.
@@ -36,7 +36,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 ## 💼 Built for Scale (B2B SaaS & Creator Monetization)
 * **Zero Installation Required:** Pure browser-based web application.
 * **Eco-Friendly & Cost-Effective:** Zero paper waste, perfect for modern graduations, weddings, and corporate galas.
-* **Freemium & Pro Revenue Model:** Free tier protected by watermarks and supported by AdSense/Sponsors, with an instant **Pro Upgrade** path for full unwatermarked exports, high-res downloads, and a 100% ad-free experience.
+* **Organic Viral Loop & Freemium Model:** Free letters include a clickable **"Sent via HandleVault"** footer mark for organic growth, while upgrading to **Pro** unlocks white-label branding, unwatermarked high-res exports, and a 100% ad-free experience.
 
 ---
 
