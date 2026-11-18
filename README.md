@@ -22,24 +22,25 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 4. **🚨 Live Ticker Hub:** Real-time stream announcements and retro-futuristic event feeds.
 5. **⚡ RSVP & Guest List Manager:** Instant attendance tracking for digital letter recipients.
 6. **✨ Crisp Suite Studio Apps:** Dedicated collection of standalone creative, design, and productivity utilities built alongside the core mailing suite.
-7. **💳 Multi-Payment Gateway (8-Method Checkout):** Integrated support for diverse payment methods (Credit/Debit Card, E-Wallets, Bank Transfers, and alternative checkouts) for seamless event-pass licensing.
-8. **🔊 Immersive Sound Effects (SFX):** Built-in retro audio cues, interface clicks, and unboxing soundscapes for enhanced user engagement.
-9. **🤝 Monetization & Creator Support (Sponsor, AdSense & Ko-fi Slots):** Dedicated placements for brand sponsorships, Google AdSense integration, and one-click Ko-fi tipping/support widgets.
-10. **🔗 Instant Sharing & Social Distribution:** One-click sharing buttons for direct links, social media, and instant guest invitation forwarding.
-11. **🚀 Enterprise Vault & Billing:** Centralized asset storage, instant file downloads, and subscription management.
+7. **💳 Multi-Payment Gateway (8-Method Checkout):** Integrated support for diverse payment methods (Credit/Debit Card, E-Wallets, Bank Transfers, and alternative checkouts) for seamless event-pass and Pro licensing.
+8. **👑 Pro Tier (Ad-Free Experience):** Instant removal of all AdSense placements and sponsor banners upon purchase, unlocking an uninterrupted, distraction-free workspace and premium features.
+9. **🔊 Immersive Sound Effects (SFX):** Built-in retro audio cues, interface clicks, and unboxing soundscapes for enhanced user engagement.
+10. **🤝 Monetization & Creator Support (Sponsor, AdSense & Ko-fi Slots):** Dedicated placements for brand sponsorships, Google AdSense integration (for free-tier users), and one-click Ko-fi tipping/support widgets.
+11. **🔗 Instant Sharing & Social Distribution:** One-click sharing buttons for direct links, social media, and instant guest invitation forwarding.
+12. **🚀 Enterprise Vault & Billing:** Centralized asset storage, instant file downloads, and subscription management.
 
 ---
 
 ## 💼 Built for Scale (B2B SaaS & Creator Monetization)
 * **Zero Installation Required:** Pure browser-based web application.
 * **Eco-Friendly & Cost-Effective:** Zero paper waste, perfect for modern graduations, weddings, and corporate galas.
-* **Multi-Stream Revenue Ready:** Built-in direct subscription, multi-method checkout, sponsor slots, AdSense placements, and Ko-fi creator support.
+* **Freemium & Pro Revenue Model:** Free tier supported by AdSense, Sponsor slots, and Ko-fi tips, with an instant **Pro Upgrade** path for a 100% ad-free experience and full commercial licensing.
 
 ---
 
 ## 🛡️ Platform Info, Legal & Compliance
 * **About HandleVault:** Platform mission, creator background, and enterprise vision statement.
-* **Terms of Service:** Clear usage guidelines, licensing terms for event passes, and user responsibilities.
+* **Terms of Service:** Clear usage guidelines, Pro licensing terms, and user responsibilities.
 * **Privacy Policy:** Transparent data handling practices, guest list privacy protection, and third-party ad/payment disclosures (AdSense & payment processors).
 
 ---
