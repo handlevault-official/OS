@@ -1,4 +1,4 @@
-# ⏳ Chronoverse Studio — HandleVault Suite
+# ⏳ OS — HandleVault Suite
 
 > **Retro-Futurism Meets Enterprise Events.** A high-end, set-and-forget digital event platform designed for schools, HR departments, and professional event organizers. Replace expensive, wasteful paper invitations with immersive, interactive 3D digital letters and automated suites.
 
