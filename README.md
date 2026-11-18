@@ -39,6 +39,19 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 
 ---
 
+## 🔐 Google Sign-In Authentication Gate ("No ID, No Entry")
+
+To secure access before entering the HandleVault OS environment (`#app-content`), the platform uses **Google Identity Services (GIS)** as a client-side front-door gate:
+
+* **Library:** `https://accounts.google.com/gsi/client`
+* **Google Client ID:** `1072305306917-dbnsf87n7bk20a06c9tsm8bbbup84nqf.apps.googleusercontent.com`
+* **Session Persistence:** Uses `localStorage` (`crisp_logged_in = 'true'`) so signed-in users stay logged in across refreshes until clicking **Sign Out**.
+* **Architecture & Theme Matching Note:**
+  * `#login-container` acts as the full-screen entry gate (`z-index: 9999`), while `#app-content` stays hidden (`display: none`) until `handleLoginSuccess(response)` triggers.
+  * Style `#login-container` to match the dark glassmorphic OS theme (`--bg: #090d19`, `--panel: #121a2d`, `--mint: #6ce0d0`, `--purple: #a99aff`, `--gold: #f2c879`) while preserving the `data-client_id` and `data-callback` attributes.
+
+---
+
 ## 💼 Built for Scale & "Set-and-Forget" Operations
 * **Zero Infrastructure Overhead:** Pure browser-based application hosted on static cloud CDNs—no database servers to patch, no OS updates to manage, ensuring true 10-year maintenance-free reliability.
 * **Automated Infrastructure & Domain Continuity:** Configured with multi-year domain registration, automated billing renewal, and redundant payment routing so the platform's primary web address and SSL certificates remain active uninterrupted for 10+ years.
