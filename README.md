@@ -28,7 +28,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 9. **🔒 Content Security & Anti-Piracy Protection:** Built-in safeguards for free-tier previews including dynamic **Watermarks**, **Blurred Previews**, and **Animated Live Badges** (to prevent unauthorized static screenshots and protect event pass integrity).
 10. **💾 Save Progress & Session Tracking:** Built-in one-click save buttons and client-side local storage so users can preserve drafts, monitor completion status, and resume projects anytime without data loss.
 11. **🌐 Global Multi-Language Localization:** Built-in internationalization (i18n) framework supporting multiple languages for seamless global accessibility.
-12. **🔐 Secure Social & Google Authentication:** Integrated one-tap sign-in options via Google and major social platforms for frictionless user onboarding and secure session management.
+12. **🔐 Secure Google & Social OAuth Authentication:** Integrated with Google Sign-In for frictionless user onboarding, robust session management, and enterprise-grade credential security—eliminating the need for vulnerable password-based databases.
 13. **💳 Multi-Payment Gateway (8-Method Checkout):** Integrated support for diverse payment methods (Credit/Debit Card, E-Wallets, Bank Transfers, and alternative checkouts) for seamless event-pass and Pro licensing.
 14. **👑 Pro Tier (Ad-Free, White-Label & Full Export):** Instant removal of all AdSense placements, sponsor badges/bars, preview watermarks, and "Sent via HandleVault" branding upon purchase, unlocking white-label exports and an uninterrupted workspace.
 15. **🔊 Immersive Sound Effects (SFX):** Built-in retro audio cues, interface clicks, and unboxing soundscapes for enhanced user engagement.
