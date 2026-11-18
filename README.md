@@ -33,7 +33,8 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 14. **🔊 Immersive Sound Effects (SFX):** Built-in retro audio cues, interface clicks, and unboxing soundscapes for enhanced user engagement.
 15. **🤝 Monetization & Creator Support (Micro-Sponsor Badge, AdSense & Ko-fi):** Non-intrusive, self-serve **YouTube-style micro-sponsorships** featuring a sleek **"Sponsored" badge** and a compact **bottom text-based info bar** (no disruptive full-screen ads), alongside Google AdSense integration (for free-tier users) and one-click Ko-fi tipping widgets.
 16. **🔗 Instant Sharing & Social Distribution:** One-click sharing buttons for direct links, social media, and instant guest invitation forwarding.
-17. **🏦 Enterprise Vault, Treasury Caps & Billing:** Centralized asset storage and disciplined financial controls featuring **Capped Monthly Admin Payouts** (preventing over-withdrawal of platform funds) and **Automated Bank/Interest-Yield Reserve Routing** so surplus revenue compounds safely for long-term growth.
+17. **💬 External Discord Support Forum & Community Hub:** Direct one-click link to an external Discord community forum for peer-to-peer support, template sharing, and feature discussions—keeping user-generated discussions off the core static web app to maintain zero database overhead and full AdSense compliance.
+18. **🏦 Enterprise Vault, Treasury Caps & Billing:** Centralized asset storage and disciplined financial controls featuring **Capped Monthly Admin Payouts** (preventing over-withdrawal of platform funds) and **Automated Bank/Interest-Yield Reserve Routing** so surplus revenue compounds safely for long-term growth.
 
 ---
 
@@ -48,7 +49,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 
 ## 🛡️ Platform Info, Legal, AdSense & Compliance
 * **About HandleVault:** Platform mission, creator background, and enterprise vision statement.
-* **Contact Us:** Dedicated support and inquiry channel for users, partners, and ad/publisher verifications.
+* **Contact Us & Discord Community:** Dedicated support email and official external Discord support forum link for user assistance, partner inquiries, and ad/publisher verifications.
 * **Terms of Service:** Clear usage guidelines, Pro licensing terms, and user responsibilities.
 * **Privacy Policy & AdSense Compliance:** Transparent data handling practices, mandatory Cookie/DART disclosures for Google AdSense, absolute **"No-Selling of User or Guest Data"** guarantee, secure guest list privacy protection, and third-party payment gateway disclosures.
 
