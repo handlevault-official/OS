@@ -1,6 +1,6 @@
 # ⏳ OS — HandleVault Suite
 
-> **Retro-Futurism Meets Enterprise Events & Creative Utilities.** A high-end, set-and-forget digital platform designed for schools, HR departments, and professional event organizers. Replace expensive, wasteful paper invitations with immersive, interactive 3D digital letters, automated suites, standalone creative tools, secure checkout, and atmospheric audio.
+> **Retro-Futurism Meets Enterprise Events & Creative Utilities.** A high-end, set-and-forget digital platform designed for schools, HR departments, and professional event organizers. Replace expensive, wasteful paper invitations with immersive, interactive 3D digital letters, automated suites, standalone creative tools, secure checkout, and atmospheric audio. Engineered for a **10-year "set-and-forget" lifecycle** with zero manual server maintenance.
 
 ---
 
@@ -26,7 +26,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 7. **🛡️ Anti-Hacking & Anti-Tamper Defense:** Hardened front-end protection featuring input sanitization (XSS/injection prevention), strict Content Security Policy (CSP), rate-limiting, and encrypted session validation to safeguard platform integrity and user assets.
 8. **⚡ Offline-First "No-Shutdown" Resilience (PWA & Edge Caching):** Built with Service Workers and local browser storage so core tools, saved letters, and event passes keep running smoothly on battery-powered devices even during internet outages or power interruptions, automatically syncing once connection returns.
 9. **🔒 Content Security & Anti-Piracy Protection:** Built-in safeguards for free-tier previews including dynamic **Watermarks**, **Blurred Previews**, and **Animated Live Badges** (to prevent unauthorized static screenshots and protect event pass integrity).
-10. **💾 Save Progress & Session Tracking:** Built-in one-click save buttons and real-time progress tracking so users can preserve drafts, monitor completion status, and resume projects anytime without data loss.
+10. **💾 Save Progress & Session Tracking:** Built-in one-click save buttons and client-side local storage so users can preserve drafts, monitor completion status, and resume projects anytime without data loss.
 11. **🌐 Global Multi-Language Localization:** Built-in internationalization (i18n) framework supporting multiple languages for seamless global accessibility.
 12. **💳 Multi-Payment Gateway (8-Method Checkout):** Integrated support for diverse payment methods (Credit/Debit Card, E-Wallets, Bank Transfers, and alternative checkouts) for seamless event-pass and Pro licensing.
 13. **👑 Pro Tier (Ad-Free, White-Label & Full Export):** Instant removal of all AdSense placements, sponsor badges/bars, preview watermarks, and "Sent via HandleVault" branding upon purchase, unlocking white-label exports and an uninterrupted workspace.
@@ -37,8 +37,8 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 
 ---
 
-## 💼 Built for Scale (B2B SaaS & Creator Monetization)
-* **Zero Installation & Offline-Ready:** Pure browser-based web application with Service Worker caching for uninterrupted offline operation during power or network drops.
+## 💼 Built for Scale & "Set-and-Forget" Operations
+* **Zero Infrastructure Overhead:** Pure browser-based application hosted on static cloud CDNs—no database servers to patch, no OS updates to manage, ensuring true 10-year maintenance-free reliability.
 * **Eco-Friendly & Cost-Effective:** Zero paper waste, perfect for modern graduations, weddings, and corporate galas.
 * **Sustainable Financial Governance:** Disciplined monthly payout limits protect platform liquidity while automatically routing excess revenue into interest-earning bank reserves.
 * **Organic Viral Loop & Freemium Model:** Free letters include a clickable **"Sent via HandleVault"** footer mark and non-intrusive bottom text sponsor badges, while upgrading to **Pro** unlocks white-label branding, unwatermarked high-res exports, and a 100% ad-free experience.
