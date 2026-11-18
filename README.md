@@ -5,7 +5,7 @@
 ---
 
 ## 🚀 The 6-In-1 Enterprise Suite
-Chronoverse Studio houses six core modules built into a single, seamless web platform:
+Handlevault OS houses six core modules built into a single, seamless web platform:
 1. **✉️ 3D Envelope Studio:** Interactive digital letters with custom wax seals and unboxing experiences.
 2. **🎨 VIP Badge & Pass Generator:** Attendee ID badges and QR-enabled access passes.
 3. **💎 Certificate & Award Forge:** Bulk generation of digital honors and employee recognition awards.
