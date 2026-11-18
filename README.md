@@ -45,7 +45,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 ## 🛡️ Platform Info, Legal & Compliance
 * **About HandleVault:** Platform mission, creator background, and enterprise vision statement.
 * **Terms of Service:** Clear usage guidelines, Pro licensing terms, and user responsibilities.
-* **Privacy Policy:** Transparent data handling practices, guest list privacy protection, and third-party ad/payment disclosures (AdSense & payment processors).
+* **Privacy Policy & Strict Data Security:** Transparent data handling practices, absolute **"No-Selling of User or Guest Data"** guarantee, secure guest list privacy protection, and third-party ad/payment disclosures (AdSense & payment processors).
 
 ---
 *Built with passion for the future of digital correspondence.*
