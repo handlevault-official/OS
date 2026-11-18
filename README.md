@@ -27,9 +27,9 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 8. **💾 Save Progress & Session Tracking:** Built-in one-click save buttons and real-time progress tracking so users can preserve drafts, monitor completion status, and resume projects anytime without data loss.
 9. **🌐 Global Multi-Language Localization:** Built-in internationalization (i18n) framework supporting multiple languages for seamless global accessibility.
 10. **💳 Multi-Payment Gateway (8-Method Checkout):** Integrated support for diverse payment methods (Credit/Debit Card, E-Wallets, Bank Transfers, and alternative checkouts) for seamless event-pass and Pro licensing.
-11. **👑 Pro Tier (Ad-Free, White-Label & Full Export):** Instant removal of all AdSense placements, sponsor banners, preview watermarks, and "Sent via HandleVault" branding upon purchase, unlocking white-label exports and an uninterrupted workspace.
+11. **👑 Pro Tier (Ad-Free, White-Label & Full Export):** Instant removal of all AdSense placements, sponsor badges/bars, preview watermarks, and "Sent via HandleVault" branding upon purchase, unlocking white-label exports and an uninterrupted workspace.
 12. **🔊 Immersive Sound Effects (SFX):** Built-in retro audio cues, interface clicks, and unboxing soundscapes for enhanced user engagement.
-13. **🤝 Monetization & Creator Support (Sponsor, AdSense & Ko-fi Slots):** Dedicated placements for brand sponsorships, Google AdSense integration (for free-tier users), and one-click Ko-fi tipping/support widgets.
+13. **🤝 Monetization & Creator Support (Micro-Sponsor Badge, AdSense & Ko-fi):** Non-intrusive, self-serve **YouTube-style micro-sponsorships** featuring a sleek **"Sponsored" badge** and a compact **bottom text-based info bar** (no disruptive full-screen ads), alongside Google AdSense integration (for free-tier users) and one-click Ko-fi tipping widgets.
 14. **🔗 Instant Sharing & Social Distribution:** One-click sharing buttons for direct links, social media, and instant guest invitation forwarding.
 15. **🚀 Enterprise Vault & Billing:** Centralized asset storage, instant file downloads, and subscription management.
 
@@ -38,7 +38,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 ## 💼 Built for Scale (B2B SaaS & Creator Monetization)
 * **Zero Installation Required:** Pure browser-based web application.
 * **Eco-Friendly & Cost-Effective:** Zero paper waste, perfect for modern graduations, weddings, and corporate galas.
-* **Organic Viral Loop & Freemium Model:** Free letters include a clickable **"Sent via HandleVault"** footer mark for organic growth, while upgrading to **Pro** unlocks white-label branding, unwatermarked high-res exports, and a 100% ad-free experience.
+* **Organic Viral Loop & Freemium Model:** Free letters include a clickable **"Sent via HandleVault"** footer mark and non-intrusive bottom text sponsor badges, while upgrading to **Pro** unlocks white-label branding, unwatermarked high-res exports, and a 100% ad-free experience.
 
 ---
 
