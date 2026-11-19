@@ -1,0 +1,45 @@
+# Backups & Local Archives (keep ZIP backups out of public repo)
+*.zip
+*.tar
+*.tar.gz
+*.bak
+*.backup
+*backup*/
+
+# Secrets, Keys, Tokens & Environment Variables
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*secret*
+*token*
+*credential*
+*credentials*
+*password*
+
+# Internal Notes, Scratchpads & Drafts
+NOTES.md
+INTERNAL*.md
+TODO_PRIVATE.md
+*.draft.html
+*.local.json
+
+# OS & Mobile/Editor Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs & Temporary Files
+*.log
+npm-debug.log*
+.cache/
+tmp/
+temp/
