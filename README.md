@@ -20,6 +20,14 @@
 
 ---
 
+## Storefront & Mail Stamps Flow
+- **Products (Stamps Only, No Pixel Arts):** Emoji stamps are the primary storefront and Gumroad product line for mail/dispatch drops. Do not include pixel art products or pixel art catalogs in the store or message flow.
+- **Entry & Workspace Architecture:** The Homepage acts as the static storefront entry with clear navigation buttons and Gumroad links, while the Workspace maintains a steady layout (consistent sidebars and tools) separate from the entry flow.
+- **Flash Messages:** Store highlights and Gumroad links for emoji stamps are surfaced via flash messages inside the mail/message area without altering the steady Workspace layout.
+- **Freeze & Security Rules:** Keep `index.html` locked until core OS work is complete, create a fresh ZIP backup before any Homepage edits, and exclude credentials, secret keys, or internal notes from public-facing text and flash messages.
+  
+---
+
 ## 🚀 The Enterprise Suite & Features
 HandleVault OS houses core mailing modules, standalone studio apps, and immersive features built into a single, seamless web platform:
 
