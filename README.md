@@ -11,6 +11,9 @@
 * **Adaptive Light & Dark Modes:** Fully supported theme toggling with high-contrast color palettes optimized for both bright daytime use and deep, glowing night aesthetics.
 * **Responsive & Adaptive Layout:** Engineered for seamless rendering across desktop monitors, tablets, and mobile screens without layout shifts.
 * **Tactile Micro-Interactions:** Hover states, tactile button feedback, and synchronized visual-audio responses.
+# ✉️ Front Preview & Login Page Concept (3D Letter & Workspace Teaser)
+* **Front Teaser Before Entry (`#login-container`):** Displays an ad-style visual preview focused on **3D digital letters, wax-sealed envelopes, and workspace progress** so prospective users immediately see what the platform does before signing in.
+* **Targeted to Serious Users:** Attracts users who want to create/send meaningful letters or messages and track their progress inside the workspace, rather than casual passersby just peeking at random pages.
 
 ---
 
@@ -36,12 +39,6 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 17. **💬 Direct Messenger & Social Chat Distribution:** One-click sharing integration optimized for Messenger, WhatsApp, and social platforms—allowing users to instantly dispatch immersive 3D digital letter links straight to recipients' chat heads with rich visual previews.
 18. **💬 External Discord Support Forum & Community Hub:** Direct one-click link to an external Discord community forum for peer-to-peer support, template sharing, and feature discussions—keeping user-generated discussions off the core static web app to maintain zero database overhead and full AdSense compliance.
 19. **🏦 Enterprise Vault, Treasury Caps & Billing:** Centralized asset storage and disciplined financial controls featuring **Capped Monthly Admin Payouts** (preventing over-withdrawal of platform funds) and **Automated Bank/Interest-Yield Reserve Routing** so surplus revenue compounds safely for long-term growth.
-
----
-
-## ✉️ Front Preview & Login Page Concept (3D Letter & Workspace Teaser)
-* **Front Teaser Before Entry (`#login-container`):** Displays an ad-style visual preview focused on **3D digital letters, wax-sealed envelopes, and workspace progress** so prospective users immediately see what the platform does before signing in.
-* **Targeted to Serious Users:** Attracts users who want to create/send meaningful letters or messages and track their progress inside the workspace, rather than casual passersby just peeking at random pages.
 
 ---
 
