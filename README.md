@@ -11,7 +11,10 @@
 * **Adaptive Light & Dark Modes:** Fully supported theme toggling with high-contrast color palettes optimized for both bright daytime use and deep, glowing night aesthetics.
 * **Responsive & Adaptive Layout:** Engineered for seamless rendering across desktop monitors, tablets, and mobile screens without layout shifts.
 * **Tactile Micro-Interactions:** Hover states, tactile button feedback, and synchronized visual-audio responses.
-# ✉️ Front Preview & Login Page Concept (3D Letter & Workspace Teaser)
+
+---
+
+## ✉️ Front Preview & Login Page Concept (3D Letter & Workspace Teaser)
 * **Front Teaser Before Entry (`#login-container`):** Displays an ad-style visual preview focused on **3D digital letters, wax-sealed envelopes, and workspace progress** so prospective users immediately see what the platform does before signing in.
 * **Targeted to Serious Users:** Attracts users who want to create/send meaningful letters or messages and track their progress inside the workspace, rather than casual passersby just peeking at random pages.
 
@@ -47,7 +50,7 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 To secure access before entering the HandleVault OS environment (`#app-content`), the platform uses **Google Identity Services (GIS)** as a client-side front-door gate:
 
 * **Library:** `https://accounts.google.com/gsi/client`
-* **Google Client ID:** `1072305306917-dbnsf87n7bk20a06c9tsm8bbbup84nqf.apps.googleusercontent.com`
+* **Google Client ID (LOCKED — Do Not Edit):** `1072305306917-dbnsf87n7bk20a06c9tsm8bbbup84nqf.apps.googleusercontent.com`
 * **Session Persistence:** Uses `localStorage` (`crisp_logged_in = 'true'`) so signed-in users stay logged in across refreshes until clicking **Sign Out**.
 * **Architecture & Theme Matching Note:**
   * `#login-container` acts as the full-screen entry gate (`z-index: 9999`), while `#app-content` stays hidden (`display: none`) until `handleLoginSuccess(response)` triggers.
@@ -69,6 +72,13 @@ To secure access before entering the HandleVault OS environment (`#app-content`)
 * **Contact Us & Discord Community:** Dedicated support email and official external Discord support forum link for user assistance, partner inquiries, and ad/publisher verifications.
 * **Terms of Service:** Clear usage guidelines, Pro licensing terms, and user responsibilities.
 * **Privacy Policy & AdSense Compliance:** Transparent data handling practices, mandatory Cookie/DART disclosures for Google AdSense, absolute **"No-Selling of User or Guest Data"** guarantee, secure guest list privacy protection, and third-party payment gateway disclosures.
+
+---
+
+## ⚠️ Active Development & Editing Guardrails
+* **Do Not Edit the Google Client ID:** Keep `1072305306917-dbnsf87n7bk20a06c9tsm8bbbup84nqf.apps.googleusercontent.com` untouched across the README and login setup so the active Google Sign-In connection does not break.
+* **Hold Homepage Edits:** Do not edit or overwrite the existing homepage (`index.html`) yet while Claude is actively reading, reviewing, and building on the current page.
+* **Preserve Backup & Session Logic:** Keep the backup copy of the homepage and the existing `crisp_logged_in` session handling intact until the OS flow is fully verified.
 
 ---
 *Built with passion for the future of digital correspondence.*
