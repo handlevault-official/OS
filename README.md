@@ -45,6 +45,12 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 
 ---
 
+## 💳 Payment Methods ("To Follow") & PayMongo Reserved Slot
+* **Pending Payment Accounts ("To Follow"):** Remaining payment method accounts are marked **To Follow** while merchant/account setups are finalized. Do not place raw account numbers, secret keys, or unverified payment endpoints in the code or repository.
+* **PayMongo Reserved Slot (Ready to Wire):** Keep the PayMongo slot/shortcut reserved and ready in the payment/workspace setup so it can be wired cleanly once account setup and credentials are ready—without embedding login credentials or secret keys inside front-end code.
+
+---
+
 ## 🔐 Google Sign-In Authentication Gate ("No ID, No Entry")
 
 To secure access before entering the HandleVault OS environment (`#app-content`), the platform uses **Google Identity Services (GIS)** as a client-side front-door gate:
@@ -73,13 +79,6 @@ To secure access before entering the HandleVault OS environment (`#app-content`)
 * **Terms of Service:** Clear usage guidelines, Pro licensing terms, and user responsibilities.
 * **Privacy Policy & AdSense Compliance:** Transparent data handling practices, mandatory Cookie/DART disclosures for Google AdSense, absolute **"No-Selling of User or Guest Data"** guarantee, secure guest list privacy protection, and third-party payment gateway disclosures.
 
----
-
-## 💳 Payment Methods & Account Setup Status ("To Follow")
-* **Current Status:** Payment method accounts are currently **To Follow** while merchant/account setups are being finalized.
-* **Planned Payment Categories:** Support is scoped for major digital checkout options (cards, e-wallets, and bank transfers) once each corresponding account is active and verified.
-* **Security & Guardrail Note:** Do not place raw account numbers, secret keys, or unverified payment endpoints in the repository or public docs. Keep pending payment items clearly marked as **To Follow** until account setup is complete.
-  
 ---
 
 ## ⚠️ Active Development & Editing Guardrails
