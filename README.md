@@ -75,6 +75,13 @@ To secure access before entering the HandleVault OS environment (`#app-content`)
 
 ---
 
+## 💳 Payment Methods & Account Setup Status ("To Follow")
+* **Current Status:** Payment method accounts are currently **To Follow** while merchant/account setups are being finalized.
+* **Planned Payment Categories:** Support is scoped for major digital checkout options (cards, e-wallets, and bank transfers) once each corresponding account is active and verified.
+* **Security & Guardrail Note:** Do not place raw account numbers, secret keys, or unverified payment endpoints in the repository or public docs. Keep pending payment items clearly marked as **To Follow** until account setup is complete.
+  
+---
+
 ## ⚠️ Active Development & Editing Guardrails
 * **Do Not Edit the Google Client ID:** Keep `1072305306917-dbnsf87n7bk20a06c9tsm8bbbup84nqf.apps.googleusercontent.com` untouched across the README and login setup so the active Google Sign-In connection does not break.
 * **Hold Homepage Edits:** Do not edit or overwrite the existing homepage (`index.html`) yet while Claude is actively reading, reviewing, and building on the current page.
