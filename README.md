@@ -39,6 +39,12 @@ HandleVault OS houses core mailing modules, standalone studio apps, and immersiv
 
 ---
 
+## ✉️ Front Preview & Login Page Concept (3D Letter & Workspace Teaser)
+* **Front Teaser Before Entry (`#login-container`):** Displays an ad-style visual preview focused on **3D digital letters, wax-sealed envelopes, and workspace progress** so prospective users immediately see what the platform does before signing in.
+* **Targeted to Serious Users:** Attracts users who want to create/send meaningful letters or messages and track their progress inside the workspace, rather than casual passersby just peeking at random pages.
+
+---
+
 ## 🔐 Google Sign-In Authentication Gate ("No ID, No Entry")
 
 To secure access before entering the HandleVault OS environment (`#app-content`), the platform uses **Google Identity Services (GIS)** as a client-side front-door gate:
