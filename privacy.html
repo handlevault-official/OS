@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d19">
+  <meta name="description" content="Privacy Policy for HandleVault OS &amp; Crisp Suite — No-selling of user or guest data, local browser storage, Google Sign-In session handling, cookie/AdSense disclosures, and third-party checkout links.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://accounts.google.com https://*.gumroad.com https://ko-fi.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:;">
+  <title>Privacy Policy — HandleVault OS &amp; Crisp Suite</title>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090d19;
+      --panel: #121a2d;
+      --panel-2: #17223b;
+      --line: rgba(190, 205, 235, 0.16);
+      --text: #f4f7ff;
+      --muted: #aab5ca;
+      --purple: #a99aff;
+      --mint: #6ce0d0;
+      --gold: #f2c879;
+      --shadow: 0 22px 50px rgba(0, 0, 0, 0.48);
+    }
+
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f3f6fc;
+      --panel: #ffffff;
+      --panel-2: #e9effa;
+      --line: rgba(20, 32, 62, 0.14);
+      --text: #0e1629;
+      --muted: #4a5772;
+      --purple: #5b46e8;
+      --mint: #0d9488;
+      --gold: #b47812;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(169, 154, 255, 0.18), transparent 36rem),
+        radial-gradient(ellipse at 90% 12%, rgba(108, 224, 208, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      font: 15px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1140px, calc(100% - 32px)); margin: 0 auto; }
+
+    /* Top Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(9, 13, 25, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    html[data-theme="light"] header { background: rgba(255, 255, 255, 0.92); }
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--mint), var(--purple));
+      color: #090d19;
+      font-weight: 950;
+    }
+    .nav-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 15px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.86rem;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      cursor: pointer;
+      transition: transform 0.16s ease, border-color 0.16s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: var(--mint); }
+    .btn.primary {
+      background: linear-gradient(110deg, var(--mint), #b9adff);
+      color: #090d19;
+      border: none;
+    }
+    .btn.gold-btn {
+      background: linear-gradient(110deg, var(--gold), #ffe0a3);
+      color: #161208;
+      border: none;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--line);
+      background: rgba(169, 154, 255, 0.12);
+      color: var(--mint);
+    }
+    .gold-tag {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* Hero Banner */
+    .hero { padding: 48px 0 24px; }
+    .hero-card {
+      padding: 28px;
+      border-radius: 24px;
+      background: linear-gradient(130deg, rgba(111, 94, 210, 0.18), var(--panel));
+      border: 1px solid rgba(169, 154, 255, 0.32);
+      box-shadow: var(--shadow);
+    }
+    .hero-card h1 {
+      font-size: clamp(2rem, 4.4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin: 12px 0;
+    }
+    .gradient-text {
+      background: linear-gradient(100deg, var(--text), var(--purple) 55%, var(--mint));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-card p { color: var(--muted); max-width: 780px; margin: 0; font-size: 1rem; }
+
+    /* Sections & Cards */
+    section { padding-top: 32px; }
+    .sec-head { margin-bottom: 16px; }
+    .sec-head h2 { margin: 4px 0; font-size: 1.5rem; }
+    .sec-head p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    .card {
+      padding: 20px;
+      border-radius: 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .card h3 { margin: 4px 0; font-size: 1.12rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.89rem; }
+    .card ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.88rem; }
+    .card li { margin-bottom: 6px; }
+
+    .callout-strip {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: linear-gradient(120deg, rgba(242, 200, 121, 0.14), rgba(108, 224, 208, 0.12));
+      border: 1px solid rgba(242, 200, 121, 0.42);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    footer {
+      margin-top: 44px;
+      padding: 22px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+
+    @media (max-width: 920px) { .grid-3 { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero-card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="index.html">
+          <span class="mark">HV</span>
+          <span>HANDLEVAULT OS</span>
+        </a>
+        <div class="nav-actions">
+          <a class="btn" href="index.html">← Back to OS</a>
+          <a class="btn" href="About.html">About</a>
+          <a class="btn" href="#data-guarantee">Data Guarantee</a>
+          <a class="btn" href="#cookies-adsense">Cookies &amp; Ads</a>
+          <button type="button" class="btn" onclick="toggleTheme()">☀️ / 🌙</button>
+          <a class="btn gold-btn" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">Get Stamps ($1 / ₱29) ↗</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-card">
+        <span class="pill">Privacy Policy • HandleVault OS &amp; Crisp Suite</span>
+        <h1>Transparent Privacy &amp; <span class="gradient-text">Strict No-Selling of User Data.</span></h1>
+        <p>This Privacy Policy explains how HandleVault OS and Crisp Suite handle local browser drafts, session states, sign-in gates, cookies/advertising disclosures, and third-party storefront or support links across our static web platform.</p>
+      </div>
+    </section>
+
+    <!-- Core Privacy Guarantee -->
+    <section id="data-guarantee">
+      <div class="sec-head">
+        <div class="gold-tag">Core Privacy Principles</div>
+        <h2>No-Selling of User or Guest Data</h2>
+        <p>Designed around static browser reliability and respectful handling of personal drafts, notes, and event details.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>🔒 Zero Data Selling</h3>
+          <p>We never sell, rent, or broker user or guest data to third parties. Guest list details, event RSVPs, personal notes, and creative drafts are not packaged for sale.</p>
+        </div>
+        <div class="card">
+          <h3>💾 Local Browser Storage</h3>
+          <p>Draft notes, selected catalog stamps, theme preferences, and session flags stay in your browser's local storage so you can resume work without a central database.</p>
+        </div>
+        <div class="card">
+          <h3>🛡️ Clean Front-End Guardrails</h3>
+          <p>We avoid storing passwords in custom databases, avoid exposing secret keys or private payment details in front-end code, and sanitize user-facing text.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sign-In, Local Storage & Stamp Catalog Behavior -->
+    <section>
+      <div class="sec-head">
+        <div class="gold-tag">Authentication &amp; In-App Catalog</div>
+        <h2>How Sign-In, Drafts &amp; Stamp Catalogs Work</h2>
+        <p>Clear visibility into what happens inside your browser when using the workspace and stamp catalog.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div>
+            <div class="gold-tag">✦ Google Sign-In &amp; Session State</div>
+            <h3>Client-Side Access Gate</h3>
+            <p>HandleVault OS uses Google Identity Services on the front gate and remembers your signed-in state in browser storage (<code>crisp_logged_in</code>) until you choose to sign out.</p>
+          </div>
+          <ul>
+            <li>Sign out anytime to clear the local session flag in your browser</li>
+            <li>No raw authentication tokens or credentials are intentionally logged to public consoles</li>
+            <li>Theme preferences (<code>hv_theme</code>) and drafts (<code>hv_letter_draft</code>) remain local</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div>
+            <div class="gold-tag">✦ Native Emoji Catalog &amp; Preview</div>
+            <h3>No System Keyboard Modification</h3>
+            <p>Curated stamp packs—whether used for 3D letters, journals, study notes, or everyday entries—work through in-app catalog selection and live preview using native Unicode emojis.</p>
+          </div>
+          <ul>
+            <li>Stamps are not automatically installed into your phone or computer system keyboard</li>
+            <li>Main stamp packs are priced at <strong>$1 USD / ₱29 Local</strong> with optional add-ons/custom tiers</li>
+            <li>External purchases occur on third-party storefronts such as Gumroad</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cookies, AdSense & Third-Party Gateways -->
+    <section id="cookies-adsense">
+      <div class="sec-head">
+        <div class="gold-tag">Compliance &amp; External Services</div>
+        <h2>Cookies, AdSense Disclosures &amp; Third-Party Links</h2>
+        <p>Standard disclosures for advertising, external storefronts, and community support channels.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div>
+            <div class="gold-tag">✦ Advertising &amp; Cookies</div>
+            <h3>Cookie &amp; AdSense Disclosure</h3>
+            <p>Where Google AdSense or ad placements are active on free tiers, third-party vendors (including Google) may use cookies or similar technologies to serve ads based on prior visits to this or other websites.</p>
+          </div>
+          <ul>
+            <li>Upgrading to Pro Tier removes AdSense placements, sponsor bars, and preview watermarks</li>
+            <li>You can manage cookies or ad preferences directly through your browser settings</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div>
+            <div class="gold-tag">✦ Storefronts &amp; Community</div>
+            <h3>Third-Party Checkouts &amp; Support</h3>
+            <p>When you click external links—such as Gumroad for stamp packs, Ko-fi for creator support, or external community forums—you interact with those services under their respective privacy policies.</p>
+          </div>
+          <ul>
+            <li>Reserved payment slots (such as PayMongo or other gateways) do not embed raw account numbers or secret keys in public code</li>
+            <li>External community forums keep discussions separate from the static OS core</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Navigation Callout -->
+    <div class="callout-strip">
+      <div>
+        <div class="gold-tag">Questions or Support</div>
+        <h3 style="margin: 4px 0;">Need Help With Privacy, Stamp Packs, or HandleVault OS?</h3>
+        <p style="margin: 0; color: var(--muted); font-size: 0.9rem;">Visit the official stamp storefront on Gumroad, support on Ko-fi, or return to the OS workspace.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <a class="btn primary" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">Get Stamps ($1 / ₱29) ↗</a>
+        <a class="btn" href="https://ko-fi.com/handlevaultofficial" target="_blank" rel="noopener">Support on Ko-fi ☕ ↗</a>
+        <a class="btn" href="About.html">About HandleVault OS</a>
+        <a class="btn" href="index.html">Back to OS</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot-row">
+      <span>© 2026 HandleVault OS • Crisp Suite Ecosystem. All rights reserved.</span>
+      <span>No-Selling of User or Guest Data • Local Drafts • Cookie &amp; AdSense Disclosures</span>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('hv_theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    });
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('hv_theme', next);
+    }
+  </script>
+</body>
+</html>
