@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d19">
+  <meta name="description" content="HandleVault OS — Retro-Futuristic 3D Digital Letters, Interactive Envelope Gates, Studio Utilities, and Curated Emoji Stamp Packs.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://accounts.google.com https://*.gumroad.com https://ko-fi.com; script-src 'self' 'unsafe-inline' https://accounts.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://accounts.google.com;">
+  <title>HandleVault OS — Crisp Suite &amp; 3D Digital Correspondence</title>
+
+  <!-- Google Identity Services (LOCKED Client ID) -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090d19;
+      --panel: #121a2d;
+      --panel-2: #17223b;
+      --line: rgba(190, 205, 235, 0.16);
+      --text: #f4f7ff;
+      --muted: #aab5ca;
+      --purple: #a99aff;
+      --mint: #6ce0d0;
+      --gold: #f2c879;
+      --rose: #f43f5e;
+      --shadow: 0 22px 50px rgba(0, 0, 0, 0.52);
+    }
+
+    html[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f3f6fc;
+      --panel: #ffffff;
+      --panel-2: #e9effa;
+      --line: rgba(20, 32, 62, 0.14);
+      --text: #0e1629;
+      --muted: #4a5772;
+      --purple: #5b46e8;
+      --mint: #0d9488;
+      --gold: #b47812;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(169, 154, 255, 0.18), transparent 36rem),
+        radial-gradient(ellipse at 90% 12%, rgba(108, 224, 208, 0.12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      font: 15px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Shared Buttons & Badges */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      cursor: pointer;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: var(--mint); }
+    .btn.primary {
+      background: linear-gradient(110deg, var(--mint), #b9adff);
+      color: #090d19;
+      border: none;
+    }
+    .btn.gold-btn {
+      background: linear-gradient(110deg, var(--gold), #ffe0a3);
+      color: #161208;
+      border: none;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--line);
+      background: rgba(169, 154, 255, 0.1);
+      color: var(--mint);
+    }
+    .gold-tag {
+      color: var(--gold);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* 1. FRONT PREVIEW & GOOGLE LOGIN GATE */
+    #login-container {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background:
+        radial-gradient(circle at 20% 15%, rgba(169, 154, 255, 0.22), transparent 35rem),
+        radial-gradient(circle at 80% 85%, rgba(108, 224, 208, 0.16), transparent 35rem),
+        #090d19;
+      color: #f4f7ff;
+      overflow-y: auto;
+    }
+    .gate-shell {
+      width: min(980px, 100%);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
+      background: rgba(18, 26, 45, 0.92);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(169, 154, 255, 0.32);
+      border-radius: 26px;
+      padding: 28px;
+      box-shadow: 0 28px 65px rgba(0, 0, 0, 0.65);
+    }
+    .teaser-pane {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      border-radius: 20px;
+      background: linear-gradient(145deg, rgba(111, 94, 210, 0.22), rgba(14, 22, 40, 0.85));
+      border: 1px solid rgba(190, 205, 235, 0.16);
+    }
+    .teaser-envelope {
+      margin: 16px 0;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(9, 13, 25, 0.72);
+      border: 1px solid rgba(242, 200, 121, 0.35);
+    }
+    .teaser-envelope h3 { margin: 6px 0; font-size: 1.15rem; color: #f4f7ff; }
+    .teaser-envelope p { margin: 0; font-size: 0.88rem; color: #aab5ca; }
+    .teaser-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .metric-box {
+      padding: 10px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(190, 205, 235, 0.12);
+      text-align: center;
+    }
+    .metric-box strong { display: block; color: #6ce0d0; font-size: 0.95rem; }
+    .metric-box span { font-size: 0.74rem; color: #aab5ca; }
+    .auth-pane {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(9, 13, 25, 0.65);
+      border: 1px solid rgba(190, 205, 235, 0.14);
+    }
+    .auth-pane h2 { margin: 10px 0 8px; font-size: 1.55rem; }
+    .auth-pane p { margin: 0 0 18px; color: #aab5ca; font-size: 0.9rem; }
+
+    /* 2. MAIN HANDLEVAULT OS WORKSPACE (Hidden until Google Sign-In) */
+    #app-content { display: none; min-height: 100vh; }
+
+    /* Top OS Window Bar */
+    .os-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 20px;
+      background: rgba(9, 13, 25, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    html[data-theme="light"] .os-topbar { background: rgba(255, 255, 255, 0.9); }
+    .os-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+    .os-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--mint), var(--purple));
+      color: #090d19;
+      font-weight: 950;
+    }
+    .os-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+
+    /* Steady Workspace Layout (Collapsible Sidebar + Main Viewport) */
+    .os-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: calc(100vh - 60px);
+    }
+    .os-layout.collapsed { grid-template-columns: 74px 1fr; }
+    .os-sidebar {
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .nav-group-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 6px 10px;
+    }
+    .os-layout.collapsed .nav-group-label,
+    .os-layout.collapsed .nav-text,
+    .os-layout.collapsed .sidebar-note { display: none; }
+    .side-links { display: grid; gap: 6px; }
+    .side-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--muted);
+      border: 1px solid transparent;
+      transition: 0.16s ease;
+    }
+    .side-link:hover, .side-link.active {
+      background: rgba(169, 154, 255, 0.12);
+      border-color: rgba(169, 154, 255, 0.28);
+      color: var(--text);
+    }
+    .sidebar-note {
+      padding: 12px;
+      border-radius: 14px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Main OS Viewport */
+    .os-main {
+      padding: 24px;
+      max-width: 1220px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Flash Message Strip for Emoji Stamps (No Pixel Art) */
+    .flash-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      background: linear-gradient(115deg, rgba(242, 200, 121, 0.14), rgba(108, 224, 208, 0.12));
+      border: 1px solid rgba(242, 200, 121, 0.42);
+    }
+    .flash-strip strong { color: var(--gold); }
+
+    /* Live Ticker Hub */
+    .ticker-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      margin-bottom: 22px;
+      border-radius: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+    .ticker-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--mint);
+      box-shadow: 0 0 10px var(--mint);
+      flex-shrink: 0;
+    }
+
+    /* Hero / OS Command Header */
+    .hero-window {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 20px;
+      padding: 26px;
+      border-radius: 24px;
+      background: linear-gradient(130deg, rgba(111, 94, 210, 0.18), var(--panel));
+      border: 1px solid rgba(169, 154, 255, 0.32);
+      box-shadow: var(--shadow);
+    }
+    .hero-window h1 {
+      font-size: clamp(2rem, 4.2vw, 3.3rem);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+      margin: 12px 0;
+    }
+    .gradient-text {
+      background: linear-gradient(100deg, var(--text), var(--purple) 55%, var(--mint));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-preview-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+      border-radius: 18px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+    }
+
+    /* Sections & Cards */
+    .os-section { margin-top: 38px; }
+    .section-head { margin-bottom: 16px; }
+    .section-head h2 { margin: 4px 0; font-size: 1.55rem; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+    .card {
+      padding: 20px;
+      border-radius: 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .card h3 { margin: 4px 0; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.88rem; }
+    .price-line { font-size: 1.25rem; font-weight: 900; color: var(--gold); }
+
+    /* Interactive Stamp Preview & Draft Saver Sandbox */
+    .workbench {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 20px;
+      border-radius: 22px;
+      background: var(--panel);
+      border: 1px solid rgba(108, 224, 208, 0.35);
+    }
+    .stamp-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+    .stamp-chip {
+      padding: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .stamp-chip.selected {
+      border-color: var(--gold);
+      background: rgba(242, 200, 121, 0.16);
+    }
+    .letter-canvas {
+      padding: 18px;
+      border-radius: 16px;
+      background: var(--panel-2);
+      border: 1px dashed rgba(169, 154, 255, 0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .letter-canvas textarea {
+      width: 100%;
+      min-height: 92px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--text);
+      padding: 10px;
+      font: inherit;
+      resize: vertical;
+    }
+    .attribution-mark {
+      font-size: 0.76rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Link Lists */
+    .link-list { display: grid; gap: 9px; }
+    .link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: 0.16s ease;
+    }
+    .link-item:hover { border-color: var(--mint); transform: translateX(3px); }
+
+    /* Payment & Governance Strip */
+    .pay-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .pay-slot {
+      padding: 12px;
+      border-radius: 12px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      font-size: 0.82rem;
+    }
+    .pay-slot.reserved { border-color: var(--mint); background: rgba(108, 224, 208, 0.1); }
+
+    /* Footer & Sponsor Bar */
+    .sponsor-bar {
+      margin-top: 32px;
+      padding: 12px 16px;
+      border-radius: 14px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 26px;
+      padding: 22px 0 36px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .foot-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .gate-shell, .hero-window, .workbench, .grid-3 { grid-template-columns: 1fr; }
+      .os-layout { grid-template-columns: 1fr; }
+      .os-sidebar { display: none; }
+      .os-layout.mobile-open .os-sidebar { display: flex; }
+      .pay-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .os-main { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. FRONT PREVIEW & GOOGLE LOGIN GATE ("No ID, No Entry") -->
+  <div id="login-container">
+    <div class="gate-shell">
+      <div class="teaser-pane">
+        <div>
+          <span class="pill">✦ HandleVault OS • 3D Letter &amp; Stamp Workspace</span>
+          <h1 style="margin: 14px 0 8px; font-size: 1.85rem; line-height: 1.15;">Send 3D Wax-Sealed Letters &amp; Track Your Workspace Progress</h1>
+          <p style="margin: 0; color: #aab5ca; font-size: 0.92rem;">Built for thoughtful notes, journals, schools, HR teams, and memorable events—with interactive 3D envelopes, curated emoji stamp packs, and offline-ready draft saving.</p>
+
+          <div class="teaser-envelope">
+            <div class="gold-tag">✉️ Live Letter &amp; Stamp Preview</div>
+            <h3>"Royal Crimson Seal • Official Correspondence"</h3>
+            <p>Browse in-app emoji stamps, customize wax seals, save your letter progress locally, and share direct 3D envelope links.</p>
+          </div>
+        </div>
+
+        <div class="teaser-metrics">
+          <div class="metric-box">
+            <strong>7 Gates</strong>
+            <span>3D Envelopes</span>
+          </div>
+          <div class="metric-box">
+            <strong>₱29 / $1</strong>
+            <span>Stamp Packs</span>
+          </div>
+          <div class="metric-box">
+            <strong>10-Year</strong>
+            <span>Static Resilience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-pane">
+        <div class="os-mark" style="width: 48px; height: 48px; font-size: 1.2rem;">HV</div>
+        <h2>Welcome to HandleVault OS</h2>
+        <p>Sign in with your Google account to enter the workspace, preview emoji stamps, and launch Crisp Suite apps.</p>
+
+        <!-- Google Sign-In Button Container (LOCKED Client ID) -->
+        <div id="g_id_onload"
+             data-client_id="1072305306917-dbnsf87n7bk20a06c9tsm8bbbup84nqf.apps.googleusercontent.com"
+             data-callback="handleLoginSuccess"
+             data-auto_select="false">
+        </div>
+        <div class="g_id_signin" data-type="standard" data-size="large"></div>
+
+        <p style="margin-top: 16px; font-size: 0.78rem; color: #8491aa;">
+          No-Selling of User Data • Protected Client Session
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- 2. MAIN HANDLEVAULT OS WORKSPACE -->
+  <div id="app-content">
+    <header class="os-topbar">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button class="btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar">☰</button>
+        <a class="os-brand" href="#os-top">
+          <span class="os-mark">HV</span>
+          <span>HANDLEVAULT OS</span>
+        </a>
+        <span class="pill">Crisp Suite v2.6</span>
+      </div>
+
+      <div class="os-controls">
+        <button class="btn" onclick="toggleTheme()" id="themeBtn">☀️ Light / 🌙 Dark</button>
+        <a class="btn gold-btn" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">✉️ Get Stamps ($1 / ₱29) ↗</a>
+        <button class="btn" onclick="logoutUser()">Sign Out</button>
+      </div>
+    </header>
+
+    <div class="os-layout" id="osLayout">
+      <!-- Steady Collapsible Sidebar Navigation -->
+      <aside class="os-sidebar">
+        <div>
+          <div class="nav-group-label">Core OS Modules</div>
+          <nav class="side-links">
+            <a class="side-link active" href="#os-top">🖥️ <span class="nav-text">OS Overview</span></a>
+            <a class="side-link" href="#stamps-store">✉️ <span class="nav-text">Emoji Stamp Packs</span></a>
+            <a class="side-link" href="#letter-studio">🕯️ <span class="nav-text">3D Letter &amp; Stamp Preview</span></a>
+            <a class="side-link" href="#gates-hub">💌 <span class="nav-text">3D Envelope Gates (7)</span></a>
+            <a class="side-link" href="#studio-apps">✨ <span class="nav-text">Crisp Suite Apps</span></a>
+            <a class="side-link" href="#enterprise-tools">🛡️ <span class="nav-text">Enterprise &amp; Checkout</span></a>
+            <a class="side-link" href="#compliance">📜 <span class="nav-text">About, Legal &amp; Support</span></a>
+          </nav>
+        </div>
+
+        <div class="sidebar-note">
+          <strong style="color: var(--mint); display: block; margin-bottom: 4px;">Catalog Stamp Note</strong>
+          Stamps load inside your in-app catalog &amp; preview using native Unicode emojis—no system keyboard install required.
+        </div>
+      </aside>
+
+      <!-- Main Workspace Viewport -->
+      <main class="os-main" id="os-top">
+
+        <!-- Flash Message for Emoji Stamps Storefront (No Pixel Art Products) -->
+        <div class="flash-strip" role="status">
+          <div>
+            <strong>✉️ STAMP DROP LIVE:</strong> Unlock <em>HandleVault Mail &amp; Wax Stamps</em> (30 curated stamps for mail, journals &amp; notes) for <strong>$1 USD / ₱29 Local</strong>.
+          </div>
+          <a class="btn primary" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">Open on Gumroad ↗</a>
+        </div>
+
+        <!-- Live Ticker Hub -->
+        <div class="ticker-bar">
+          <span class="ticker-dot"></span>
+          <span><strong>LIVE SYSTEM FEED:</strong> Static 10-Year Set-and-Forget Architecture • Offline Draft Persistence Active • New Botanical &amp; Midnight Cafe Stamp Catalogs Ready</span>
+        </div>
+
+        <!-- Hero Window -->
+        <section class="hero-window">
+          <div>
+            <span class="pill">Retro-Futurism Meets Creative &amp; Enterprise Utilities</span>
+            <h1>One Digital OS for <span class="gradient-text">3D Letters, Stamps &amp; Studios.</span></h1>
+            <p style="color: var(--muted); max-width: 620px;">Replace wasteful paper invites with interactive 3D wax-sealed envelopes, native emoji catalog stamp packs, standalone studio workspaces, and offline-resilient event utilities.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px;">
+              <a class="btn primary" href="#stamps-store">Browse Stamp Packs ↓</a>
+              <a class="btn" href="#gates-hub">Launch 3D Gates ↓</a>
+              <a class="btn" href="#studio-apps">Explore Studio Apps ↓</a>
+            </div>
+          </div>
+
+          <div class="hero-preview-box">
+            <div>
+              <div class="gold-tag">✦ Featured Dispatch Drop</div>
+              <h3 style="margin: 6px 0;">HandleVault Mail &amp; Wax Stamps</h3>
+              <p style="margin: 0; font-size: 0.86rem; color: var(--muted);">30 themed stamps across Mail, Love &amp; Wax, Invites, Celebration, and Cosmic—built for everyday website notes, study logs, and 3D letters.</p>
+            </div>
+            <div style="margin-top: 14px;">
+              <div class="price-line">$1 USD / ₱29 Local</div>
+              <a class="btn gold-btn" style="width: 100%; margin-top: 8px;" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">Get Mail &amp; Wax Stamps ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- STAMP STOREFRONT SECTION (Stamps Only — No Pixel Art Products) -->
+        <section class="os-section" id="stamps-store">
+          <div class="section-head">
+            <div class="gold-tag">Official Stamp Catalog Storefront</div>
+            <h2>Curated Emoji Stamp Packs (For Mail, Journals &amp; Notes)</h2>
+            <p>Designed for in-app catalog selection and live preview using native Unicode emojis—not only for mail users, but also for daily journaling, study tracking, and creative website notes.</p>
+          </div>
+
+          <div class="grid-2">
+            <!-- Pack 1: Active Gumroad Link -->
+            <div class="card" style="border-color: rgba(242, 200, 121, 0.45);">
+              <div>
+                <span class="pill">Active on Gumroad • 30 Stamps</span>
+                <h3 style="margin-top: 10px;">✉️ HandleVault Mail &amp; Wax Stamps</h3>
+                <p>Includes Mail (4), Love &amp; Wax (6), Invites &amp; Badges (6), Celebration (7), and Cosmic (7) stamps with live preview support.</p>
+              </div>
+              <div>
+                <div class="price-line">$1 USD / ₱29 Local</div>
+                <p style="font-size: 0.78rem; margin-bottom: 10px;">Free Starter Stamps ($0) • Add-ons (₱5 local) • Custom Tier (₱49+ local / $2–$5+ abroad)</p>
+                <a class="btn primary" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">Buy on Gumroad ↗</a>
+              </div>
+            </div>
+
+            <!-- Pack 2: Botanical & Pressed Flowers -->
+            <div class="card">
+              <div>
+                <span class="pill">Catalog Series 02 • Journaling &amp; Tags</span>
+                <h3 style="margin-top: 10px;">🌸 Botanical &amp; Pressed Flowers</h3>
+                <p>Pressed Blooms, Leaves &amp; Herbs, Garden Notes &amp; Seals, and Calm &amp; Seasons—crafted for quiet reflections, gratitude notes, and garden cards.</p>
+              </div>
+              <div>
+                <div class="price-line">$1 USD / ₱29 Local</div>
+                <p style="font-size: 0.78rem; margin-bottom: 10px;">Custom Botanical Stamp Tier: ₱49+ Local / $2–$5+ Abroad</p>
+                <a class="btn" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">View Storefront &amp; Requests ↗</a>
+              </div>
+            </div>
+
+            <!-- Pack 3: Midnight Cafe & Cozy Desk -->
+            <div class="card">
+              <div>
+                <span class="pill">Catalog Series 03 • Study &amp; Daily Logs</span>
+                <h3 style="margin-top: 10px;">☕ Midnight Cafe &amp; Cozy Desk</h3>
+                <p>Late-Night Brews, Study &amp; Desk Notes, Cozy Desk &amp; Lamp, and Night Moods—ideal for study sessions, coffee breaks, and late-night check-ins.</p>
+              </div>
+              <div>
+                <div class="price-line">$1 USD / ₱29 Local</div>
+                <p style="font-size: 0.78rem; margin-bottom: 10px;">Custom Cozy Stamp Tier: ₱49+ Local / $2–$5+ Abroad</p>
+                <a class="btn" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">View Storefront &amp; Requests ↗</a>
+              </div>
+            </div>
+
+            <!-- Pack 4: Celestial Tarot & Mystical -->
+            <div class="card">
+              <div>
+                <span class="pill">Catalog Series 04 • Gift Tags &amp; Prompts</span>
+                <h3 style="margin-top: 10px;">🔮 Celestial Tarot &amp; Mystical</h3>
+                <p>Sun, Moon &amp; Stars, Arcana &amp; Omens, Mystical Elements, and Night &amp; Cosmos—built for gift tags, mood boards, and creative notes.</p>
+              </div>
+              <div>
+                <div class="price-line">$1 USD / ₱29 Local</div>
+                <p style="font-size: 0.78rem; margin-bottom: 10px;">Custom Mystical Stamp Tier: ₱49+ Local / $2–$5+ Abroad</p>
+                <a class="btn" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">View Storefront &amp; Requests ↗</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTERACTIVE 3D LETTER & STAMP LIVE PREVIEW WORKBENCH -->
+        <section class="os-section" id="letter-studio">
+          <div class="section-head">
+            <div class="gold-tag">In-App Catalog &amp; Save Progress</div>
+            <h2>3D Letter &amp; Stamp Live Preview Sandbox</h2>
+            <p>Click a native emoji stamp to preview it on your note or letter and save your draft locally in your browser.</p>
+          </div>
+
+          <div class="workbench">
+            <div>
+              <strong>1. Pick a Stamp from Catalog:</strong>
+              <div class="stamp-chips" id="stampChips">
+                <button type="button" class="stamp-chip selected" onclick="selectStamp(this, '✉️ Classic Mail')">✉️ Classic Mail</button>
+                <button type="button" class="stamp-chip" onclick="selectStamp(this, '❤️‍🔥 Royal Crimson Seal')">❤️‍🔥 Royal Crimson</button>
+                <button type="button" class="stamp-chip" onclick="selectStamp(this, '🌸 Pressed Blossom')">🌸 Pressed Blossom</button>
+                <button type="button" class="stamp-chip" onclick="selectStamp(this, '☕ Midnight Espresso')">☕ Midnight Espresso</button>
+                <button type="button" class="stamp-chip" onclick="selectStamp(this, '🔮 Crystal Vision')">🔮 Crystal Vision</button>
+                <button type="button" class="stamp-chip" onclick="selectStamp(this, '🌌 Starlight Cosmos')">🌌 Starlight Cosmos</button>
+              </div>
+              <p style="font-size: 0.82rem; color: var(--muted); margin: 8px 0 14px;">
+                Native Unicode emoji rendering—selected inside your HandleVault catalog without modifying your device keyboard.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <button type="button" class="btn primary" onclick="saveDraft()">💾 Save Progress</button>
+                <button type="button" class="btn" onclick="sharePreview()">💬 Copy Share Text</button>
+              </div>
+              <p id="saveStatus" style="font-size: 0.8rem; color: var(--mint); margin-top: 8px;"></p>
+            </div>
+
+            <div class="letter-canvas">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <span class="gold-tag">Live Envelope Preview</span>
+                  <span class="pill" id="activeStampBadge">✉️ Classic Mail</span>
+                </div>
+                <textarea id="draftText" placeholder="Write a 3D letter, journal entry, or study note here..."></textarea>
+              </div>
+              <div class="attribution-mark">
+                <span>Sent via HandleVault</span>
+                <span>Pro Tier removes watermark &amp; attribution</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3D ENVELOPE GATES ECOSYSTEM (7 APPS) -->
+        <section class="os-section" id="gates-hub">
+          <div class="section-head">
+            <div class="gold-tag">Interactive 3D Envelope Architecture</div>
+            <h2>Crisp 3D Envelope Gates (7 Apps Ecosystem)</h2>
+            <p>Dual-language (English &amp; Tagalog) question-gated digital envelopes with custom wax seals and verification passes.</p>
+          </div>
+
+          <div class="link-list">
+            <a class="link-item" href="https://handlevault-official.github.io/crisp-gate-invite/" target="_blank" rel="noopener">
+              <span>💌 Crisp Gate Invite — Interactive 3D envelope for weddings, dates &amp; RSVPs</span>
+              <span>Launch ↗</span>
+            </a>
+            <a class="link-item" href="https://handlevault-official.github.io/crisp-proposal-gate/" target="_blank" rel="noopener">
+              <span>💐 Crisp Proposal Gate — Romantic &amp; business proposal screening gateway</span>
+              <span>Launch ↗</span>
+            </a>
+            <a class="link-item" href="https://handlevault-official.github.io/crisp-mission-gate/" target="_blank" rel="noopener">
+              <span>🎯 Crisp Mission Gate — Strategic mission alignment &amp; objective verification</span>
+              <span>Launch ↗</span>
+            </a>
+            <a class="link-item" href="https://handlevault-official.github.io/crisp-milestone-gate/" target="_blank" rel="noopener">
+              <span>🛡️ Crisp Milestone Gate — Phase execution &amp; scaling verification gateway</span>
+              <span>Launch ↗</span>
+            </a>
+            <a class="link-item" href="https://handlevault-official.github.io/crisp-launch-gate/" target="_blank" rel="noopener">
+              <span>🚀 Crisp Launch Gate — Mainnet go-live &amp; beta release countdown gateway</span>
+              <span>Launch ↗</span>
+            </a>
+            <a class="link-item" href="https://handlevault-official.github.io/crisp-master-gate/" target="_blank" rel="noopener">
+              <span>🏛️ Crisp Master Gate — Administrative clearance &amp; root ecosystem gateway</span>
+              <span>Launch ↗</span>
+            </a>
+            <a class="link-item" href="https://handlevault-official.github.io/crisp-career-gate/" target="_blank" rel="noopener">
+              <span>💼 Crisp Career Gate — Full-time role &amp; freelance candidate screening</span>
+              <span>Launch ↗</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- CRISP SUITE STUDIO APPS -->
+        <section class="os-section" id="studio-apps">
+          <div class="section-head">
+            <div class="gold-tag">Standalone Creative &amp; Productivity Utilities</div>
+            <h2>Crisp Suite Studio Workspaces</h2>
+            <p>Explore specialized browser workspaces built alongside the HandleVault OS mailing suite.</p>
+          </div>
+
+          <div class="grid-3">
+            <a class="card" href="https://handlevault-official.github.io/crisp-resume-CV-studio/" target="_blank" rel="noopener">
+              <div>
+                <div class="gold-tag">Business</div>
+                <h3>📄 Resume &amp; CV Studio</h3>
+                <p>Prepare polished career documents and professional profiles.</p>
+              </div>
+              <span style="color: var(--mint); font-weight: 700; font-size: 0.85rem;">Open Studio ↗</span>
+            </a>
+
+            <a class="card" href="https://handlevault-official.github.io/crisp-study-studio/" target="_blank" rel="noopener">
+              <div>
+                <div class="gold-tag">Learning</div>
+                <h3>📚 Crisp Study Studio</h3>
+                <p>Organize study sessions and build consistent learning habits.</p>
+              </div>
+              <span style="color: var(--mint); font-weight: 700; font-size: 0.85rem;">Open Studio ↗</span>
+            </a>
+
+            <a class="card" href="https://handlevault-official.github.io/crisp-invoice-studio/" target="_blank" rel="noopener">
+              <div>
+                <div class="gold-tag">Billing</div>
+                <h3>🧾 Invoice Studio</h3>
+                <p>Create and manage clean, professional billing documents.</p>
+              </div>
+              <span style="color: var(--mint); font-weight: 700; font-size: 0.85rem;">Open Studio ↗</span>
+            </a>
+          </div>
+
+          <details class="card" style="margin-top: 14px; cursor: pointer;">
+            <summary style="font-weight: 800; color: var(--mint);">View All Additional Studio Modules (12 Apps)</summary>
+            <div class="link-list" style="margin-top: 14px;">
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-moonlit-beads-blueprint-studio/" target="_blank" rel="noopener"><span>🌙 Moonlit Beads Blueprint Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/gitvoice-clinical-dashboard/" target="_blank" rel="noopener"><span>🩺 GitVoice Clinical Dashboard</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/kusina-ai/" target="_blank" rel="noopener"><span>🍲 Kusina AI Kitchen Companion</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-creator-studio/" target="_blank" rel="noopener"><span>🎨 Crisp Creator Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-math-studio/" target="_blank" rel="noopener"><span>➗ Crisp Math Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-science-studio/" target="_blank" rel="noopener"><span>🔬 Crisp Science Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-music-studio/" target="_blank" rel="noopener"><span>🎧 Crisp Music Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-farm-voice-studio/" target="_blank" rel="noopener"><span>🌱 Crisp Farm Voice Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-senior-studio/" target="_blank" rel="noopener"><span>💚 Crisp Senior Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-kids-studio/" target="_blank" rel="noopener"><span>🧸 Crisp Kids Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-game-studio/" target="_blank" rel="noopener"><span>🕹️ Crisp Game Studio</span><span>Open ↗</span></a>
+              <a class="link-item" href="https://handlevault-official.github.io/crisp-expense-studio/" target="_blank" rel="noopener"><span>💳 Crisp Expense Studio</span><span>Open ↗</span></a>
+            </div>
+          </details>
+        </section>
+
+        <!-- ENTERPRISE MODULES & PAYMENT SLOTS ("To Follow" + PayMongo Reserved) -->
+        <section class="os-section" id="enterprise-tools">
+          <div class="section-head">
+            <div class="gold-tag">Enterprise Modules &amp; Checkout Slots</div>
+            <h2>Event Utilities, Pro Tier &amp; Payment Routing</h2>
+            <p>Built for schools, HR departments, and event organizers with disciplined governance and reserved checkout slots.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <h3>🎨 VIP Badge &amp; Pass Generator</h3>
+              <p>Attendee ID badges and QR-enabled access passes with live animated anti-screenshot protection.</p>
+            </div>
+            <div class="card">
+              <h3>💎 Certificate &amp; Award Forge</h3>
+              <p>Bulk generation of digital honors, graduation certificates, and employee recognition awards.</p>
+            </div>
+            <div class="card">
+              <h3>⚡ RSVP &amp; Guest List Manager</h3>
+              <p>Instant attendance tracking with strict guest privacy protection and zero database leaks.</p>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 16px;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;">
+              <div>
+                <div class="gold-tag">Multi-Payment Gateway Readiness</div>
+                <h3>Checkout &amp; Merchant Slots</h3>
+              </div>
+              <a class="btn gold-btn" href="https://vaultkeeper117.gumroad.com/l/farpze" target="_blank" rel="noopener">Active Gumroad Stamp Checkout ↗</a>
+            </div>
+
+            <div class="pay-grid">
+              <div class="pay-slot" style="border-color: var(--gold);">
+                <strong>Gumroad Global</strong>
+                <div style="color: var(--mint);">Active • $1 / ₱29 Stamps</div>
+              </div>
+              <div class="pay-slot reserved">
+                <strong>PayMongo Slot</strong>
+                <div style="color: var(--mint);">Reserved • Ready to Wire</div>
+              </div>
+              <div class="pay-slot">
+                <strong>E-Wallets &amp; Cards</strong>
+                <div style="color: var(--muted);">Status: To Follow</div>
+              </div>
+              <div class="pay-slot">
+                <strong>Bank &amp; Pro Tier</strong>
+                <div style="color: var(--muted);">Status: To Follow</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- AUTO-ADD MICRO-SPONSORSHIP BAR & PLATFORM COMPLIANCE -->
+        <div class="sponsor-bar">
+          <div>
+            <span class="pill">Sponsored</span>
+            <span style="margin-left: 8px;">Support HandleVault OS &amp; custom 3D envelope designs via Ko-fi or automated micro-sponsorship slots.</span>
+          </div>
+          <a class="btn" href="https://ko-fi.com/handlevaultofficial" target="_blank" rel="noopener">Support on Ko-fi ☕ ↗</a>
+        </div>
+
+        <section class="os-section" id="compliance">
+          <div class="grid-2">
+            <div class="card">
+              <div class="gold-tag">About &amp; Community</div>
+              <h3>Built for 10-Year Set-and-Forget Reliability</h3>
+              <p>HandleVault OS operates as a pure static, offline-resilient browser platform—zero paper waste, zero server maintenance overhead, and external community support to keep the core app fast and clean.</p>
+            </div>
+            <div class="card">
+              <div class="gold-tag">Privacy, Terms &amp; AdSense Policy</div>
+              <h3>Strict No-Selling of User or Guest Data</h3>
+              <p>User drafts stay locally in your browser. Standard cookie disclosures apply where AdSense is enabled, and Pro Tier unlocks an ad-free, unwatermarked, white-label experience.</p>
+            </div>
+          </div>
+        </section>
+
+        <footer>
+          <div class="foot-grid">
+            <span>© 2026 HandleVault OS • Crisp Suite Ecosystem. All rights reserved.</span>
+            <span>About • Terms of Service • Privacy Policy • External Community &amp; Ko-fi Support</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // Restore Google Sign-In Session & Saved Letter Draft
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('crisp_logged_in') === 'true') {
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('app-content').style.display = 'block';
+      }
+
+      const savedTheme = localStorage.getItem('hv_theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+
+      const savedDraft = localStorage.getItem('hv_letter_draft');
+      const savedStamp = localStorage.getItem('hv_selected_stamp');
+      if (savedDraft) {
+        document.getElementById('draftText').value = savedDraft;
+      }
+      if (savedStamp) {
+        document.getElementById('activeStampBadge').textContent = savedStamp;
+      }
+    });
+
+    function handleLoginSuccess() {
+      localStorage.setItem('crisp_logged_in', 'true');
+      document.getElementById('login-container').style.display = 'none';
+      document.getElementById('app-content').style.display = 'block';
+    }
+
+    function logoutUser() {
+      localStorage.removeItem('crisp_logged_in');
+      document.getElementById('app-content').style.display = 'none';
+      document.getElementById('login-container').style.display = 'flex';
+    }
+
+    function toggleSidebar() {
+      const layout = document.getElementById('osLayout');
+      if (window.innerWidth <= 960) {
+        layout.classList.toggle('mobile-open');
+      } else {
+        layout.classList.toggle('collapsed');
+      }
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('hv_theme', next);
+    }
+
+    function selectStamp(btn, label) {
+      document.querySelectorAll('.stamp-chip').forEach(el => el.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('activeStampBadge').textContent = label;
+      localStorage.setItem('hv_selected_stamp', label);
+    }
+
+    function saveDraft() {
+      const text = document.getElementById('draftText').value;
+      localStorage.setItem('hv_letter_draft', text);
+      document.getElementById('saveStatus').textContent = '✓ Draft & stamp saved locally in your browser.';
+    }
+
+    function sharePreview() {
+      const stamp = document.getElementById('activeStampBadge').textContent;
+      const text = document.getElementById('draftText').value.trim() || 'Sending a 3D wax-sealed note via HandleVault OS!';
+      const shareMsg = `${stamp} — ${text} (Sent via HandleVault)`;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(shareMsg);
+        document.getElementById('saveStatus').textContent = '✓ Shareable preview copied to clipboard.';
+      }
+    }
+  </script>
+</body>
+</html>
